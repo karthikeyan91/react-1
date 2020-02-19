@@ -1,4 +1,8 @@
 .main {
     margin: 0 auto;
     max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
