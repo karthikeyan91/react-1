@@ -6,6 +6,7 @@ import Header from './basics/Header';
 import Footer from './basics/Footer';
 import Home from './basics/Home';
 import Contact from "./basics/Contact";
+import list from "./products/list";
 
 function App() {
     return (
@@ -14,7 +15,8 @@ function App() {
                 <Header />
                 <div className="content p-4 full-height">
                     <Route exact path="/" component={Home}/>
-                    <Route path="/contact" component={Contact}/>
+                    <Route exact path="/list" component={list}/>
+                    <Route path="/Contact" component={Contact}/>
                 </div>
                 <Footer />
             </div>
