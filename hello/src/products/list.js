@@ -1,7 +1,10 @@
 import React from 'react';
 
 class list extends React.Component {
-    render() {
+switchHandler = () => {
+    console.log('clicked');
+}   
+render() {
       return (
             <div className="container">
             <div className="row">
@@ -16,7 +19,7 @@ class list extends React.Component {
                             </div> 
                     </figcaption>
                     <div className="bottom-wrap">
-                        <a href="" className="btn btn-sm btn-primary float-right">Order Now</a>	
+                        <button onClick={this.switchHandler} className="btn btn-sm btn-primary float-right">Order Now</button>	
                         <div className="price-wrap h5">
                             <span className="price-new">$1280</span>
                         </div> 
