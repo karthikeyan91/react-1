@@ -1,68 +1,72 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Product from './items';
+
 
 class list extends React.Component {
-switchHandler = () => {
-    console.log('clicked');
-}   
+    states = {
+        itemInfo: [
+            {
+                name: 'Cadbury',
+                description: 'Cadbury Some small description goes here',
+                review: 142,
+                order: 27,
+                price: 124
+            },
+            {
+                name: 'Raisin Chocolate',
+                description: 'Raisin Chocolate small description goes here',
+                review: 542,
+                order: 237,
+                price: 564
+            },
+            {
+                name: 'Cookies',
+                description: 'Cookies Some small description goes here',
+                review: 7142,
+                order: 57,
+                price: 904
+            },
+            {
+                name: 'Tuti frooti',
+                description: 'Tuti frooti Some small description goes here',
+                review: 457,
+                order: 95,
+                price: 247
+            }
+        ]
+    } 
 render() {
       return (
             <div className="container">
-            <div className="row">
-            <div className="col-md-4">
-                <figure className="card card-product p-2">
-                    <figcaption className="info-wrap">
-                            <h4 className="title">Item 1</h4>
-                            <p className="desc">Some small description goes here</p>
-                            <div className="rating-wrap">
-                                <div className="label-rating">132 reviews</div>
-                                <div className="label-rating">154 orders </div>
-                            </div> 
-                    </figcaption>
-                    <div className="bottom-wrap">
-                        <button onClick={this.switchHandler} className="btn btn-sm btn-primary float-right">Order Now</button>	
-                        <div className="price-wrap h5">
-                            <span className="price-new">$1280</span>
-                        </div> 
-                    </div> 
-                </figure>
-            </div> 
-            <div className="col-md-4">
-                <figure className="card card-product p-2">
-                    <figcaption className="info-wrap">
-                            <h4 className="title">Item 2</h4>
-                            <p className="desc">Some small description goes here</p>
-                            <div className="rating-wrap">
-                                <div className="label-rating">132 reviews</div>
-                                <div className="label-rating">154 orders </div>
-                            </div> 
-                    </figcaption>
-                    <div className="bottom-wrap">
-                            <a href="" className="btn btn-sm btn-primary float-right">Order Now</a>	
-                            <div className="price-wrap h5">
-                                <span className="price-new">$1280</span>
-                            </div> 
-                    </div> 
-                </figure>
-            </div> 
-            <div className="col-md-4">
-                <figure className="card card-product p-2">
-                    <figcaption className="info-wrap">
-                            <h4 className="title">Item 3</h4>
-                            <p className="desc">Some small description goes here</p>
-                            <div className="rating-wrap">
-                                <div className="label-rating">132 reviews</div>
-                                <div className="label-rating">154 orders </div>
-                            </div> 
-                    </figcaption>
-                    <div className="bottom-wrap">
-                            <a href="" className="btn btn-sm btn-primary float-right">Order Now</a>	
-                            <div className="price-wrap h5">
-                                <span className="price-new">$1280</span>
-                            </div> 
-                    </div> 
-                </figure>
-            </div> 
-            </div> 
+                <div className="row">
+                    <Product 
+                    name={this.states.itemInfo[0].name} 
+                    description={this.states.itemInfo[0].description} 
+                    review={this.states.itemInfo[0].review} 
+                    orders={this.states.itemInfo[0].order} 
+                    price={this.states.itemInfo[0].price} /> 
+
+                    <Product 
+                    name={this.states.itemInfo[1].name} 
+                    description={this.states.itemInfo[1].description} 
+                    review={this.states.itemInfo[1].review} 
+                    orders={this.states.itemInfo[1].order} 
+                    price={this.states.itemInfo[1].price} /> 
+
+                    <Product 
+                    name={this.states.itemInfo[2].name} 
+                    description={this.states.itemInfo[2].description} 
+                    review={this.states.itemInfo[2].review} 
+                    orders={this.states.itemInfo[2].order} 
+                    price={this.states.itemInfo[2].price} /> 
+
+                    <Product 
+                    name={this.states.itemInfo[3].name} 
+                    description={this.states.itemInfo[3].description} 
+                    review={this.states.itemInfo[3].review} 
+                    orders={this.states.itemInfo[3].order} 
+                    price={this.states.itemInfo[3].price} /> 
+                </div> 
             </div>
         );
     }

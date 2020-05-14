@@ -18,6 +18,7 @@ class Header extends React.Component {
               <NavLink className="nav-link p-3" to="/contact">Contact</NavLink>
             </li>
           </ul>
+          <div className='mini-cart'><span className='label'>cart </span><span className='count'>0</span></div>
         </div>
       </nav>
     );
